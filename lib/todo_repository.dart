@@ -2,6 +2,7 @@ import 'todo.dart';
 
 class TodoRepository {
   final List<Todo> _todos = [];
+
   List<Todo> getAll() {
     return _todos;
   }
@@ -10,7 +11,6 @@ class TodoRepository {
     if (title.trim().isEmpty) {
       throw ArgumentError("название задачи не может быть пустым");
     }
-
     Todo todo = Todo(title.trim());
     _todos.add(todo);
   }
